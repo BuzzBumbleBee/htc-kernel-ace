@@ -6821,8 +6821,7 @@ cputime_t task_stime(struct task_struct *p)
  */
 void thread_group_times(struct task_struct *p, cputime_t *ut, cputime_t *st)
 {
-//	struct signal_struct *sig = p->signal;
-	struct task_struct *sig = p;
+	struct signal_struct *sig = p->signal;
 	struct task_cputime cputime;
 	cputime_t rtime, utime, total;
 
